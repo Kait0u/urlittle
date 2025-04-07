@@ -17,7 +17,7 @@ public class ScheduledCleanupTasks {
     private static final Logger log = LoggerFactory.getLogger(ScheduledCleanupTasks.class);
     private final CleanupService cleanupService;
 
-    @Scheduled(cron = "0 * * * * ?")
+    @Scheduled(cron = "0 0 0 * * ?")
     public void removeLinksOlderThan30Days_EverydayAtMidnight() {
         log.info("Starting clean-up: links older than 30 days to be removed.");
         LocalDate date30DaysAgo = LocalDate.now().minusDays(30);
