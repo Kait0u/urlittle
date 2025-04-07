@@ -43,4 +43,10 @@ public class ShortenerController {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         return "redirect:" + shortenedLink.getActualUrl();
     }
+
+    @ExceptionHandler({ResponseStatusException.class})
+    public String handleException(ResponseStatusException ex, Model model) {
+        return "errors/404";
+    }
+
 }
