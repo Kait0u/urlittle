@@ -60,7 +60,7 @@
             <span th:unless="${shorteningError == null}" class="text-danger" th:text="${shorteningError}"></span>
         </th:block>
         <th:block th:unless="${shortenedUrl == null}">
-            <a th:href="${shortenedUrl}" th:text="${shortenedUrl}" class="text-success"></a>
+            <a th:href="${shortenedUrl}" th:text="${shortenedUrl}" class="text-success" target="_blank"></a>
         </th:block>
     </div>
 </div>
